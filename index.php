@@ -61,8 +61,7 @@
             $parkingFilter = isset($_POST['parking']) ? (bool)$_POST['parking'] : null;
             if (
                 ($parkingFilter === null || $hotel['parking'] === $parkingFilter) &&
-                (empty($voteFilter) || $hotel['vote'] == $voteFilter) &&
-                (empty($distanceFilter) || $hotel['distance_to_center'] <= $distanceFilter)
+                (empty($voteFilter) || $hotel['vote'] == $voteFilter)
             ) {
                 $filteredHotels[] = $hotel;
             }
