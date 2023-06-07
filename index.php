@@ -57,12 +57,8 @@
         $filteredHotels = [];
 
         foreach ($hotels as $hotel) {
-            $nameFilter = $_POST['name'] ?? '';
-            $descriptionFilter = $_POST['description'] ?? '';
-            $parkingFilter = isset($_POST['parking']) ? (bool)$_POST['parking'] : null;
             $voteFilter = $_POST['vote'] ?? '';
-            $distanceFilter = $_POST['distance'] ?? '';
-
+            $parkingFilter = isset($_POST['parking']) ? (bool)$_POST['parking'] : null;
             if (
                 ($parkingFilter === null || $hotel['parking'] === $parkingFilter) &&
                 (empty($voteFilter) || $hotel['vote'] == $voteFilter) &&
